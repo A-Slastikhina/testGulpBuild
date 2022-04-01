@@ -1,7 +1,144 @@
-body 
-    color: #000000
+
+*
     margin: 0
-p
+    padding: 0
+
+
+body
+    font-family: "Open Sans"
+
+
+.wrapper
+    width: 1050px
+    margin: 0 auto
+
+
+.border-wrap 
+    width: 1150px
+    margin: 0 auto
+
+
+$main-color: #000000
+$main-size:53px
+$main-weight:400
+$main-font: "Open Sans"
+$border-color:#e7e7e7
+
+.section-title
+    font-weight: $main-weight
+    font-size: $main-size
+    color:$main-color
+
+.page-header
+    background-color: #ffffff
+    font-size: 17px
+    font-weight: bold
+    & a 
+        text-decoration: none
+        color: #000000   
+
+.border-wrap
+    border-bottom:1px solid $border-color
+
+.nav__list
+    padding-left: 0%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+
+%spesials-link
+    display: block 
+    text-align: center
+
+
+.nav__item 
+    text-decoration: none
+    color: #000000
+    &--basket
+        list-style-type: none
+        @extend %spesials-link
+        background-image: url("img_scss/cart.svg.png")
+        background-repeat: no-repeat
+        width: 43px
+        padding-top: 50%
+
+    &--search
+        list-style-type: none
+        @extend %spesials-link
+        background-image: url("img_scss/search.svg.png")
+        background-repeat: no-repeat
+        width: 43px
+        padding-top: 50%
+    
+    &--index
+        width: 157px
+        padding-top: 50%
+        list-style-type: none
+        @extend %spesials-link
+        background-image: url("img_scss/mishka-logo-desktop.png")
+        background-repeat: no-repeat
+
+.site-list__item 
+    list-style-type: none
+    &--bottom 
+        font-size: 18px
+        margin-top: 50px
+        font-weight: 900
+        list-style-type: none
+    
+.hero 
+    position: relative
+    background-color: #f9f9f9
+    height: 90vh
+    background-image: url("img_scss/hero-desktop.jpg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+
+.hero__title 
+    padding-top: 70px
     font-size: 53px
-    &:hover 
-        color: #fff
+    font-family: 'Open Sans'
+    text-align: center
+
+.hero__list 
+    width: inherit
+    position: absolute
+    padding-left: 0
+    margin: 0%
+    bottom: 0
+    display: inline-flex
+    list-style: none
+    &::after 
+        position: absolute
+        bottom: -10%
+        content: url("img_scss/zigzag-fill-desktop.svg.png")
+
+.hero__link 
+    text-decoration: none
+    display: block
+    color:#ffffff
+    font-size: 20px
+    font-family: 'Open Sans'
+    text-align: center
+
+%specials-hero-item
+    flex-grow: 1
+    display: flex
+    justify-content: space-between
+    padding:33px
+
+.hero__item--interior 
+    @extend %specials-hero-item
+    background-color: #63d1bb
+    &::after
+        content: url("img_scss/interior.svg.png")
+
+.hero__item--toys
+    @extend %specials-hero-item
+    background-color: #56c3b2
+    &::after 
+        content: url("img_scss/toy-svg.png")
+
